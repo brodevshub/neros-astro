@@ -1,0 +1,139 @@
+---
+import Hamburger from "@components/Hamburger.astro";
+
+const pathname = Astro.url.pathname;
+const pages = [
+    { name: "Home", href: "/", icon: "home" },
+    { name: "Nosotros", href: "/nosotros", icon: "nosotros" },
+    { name: "Técnicas", href: "/tecnicas", icon: "tecnicas" },
+    { name: "Contacto", href: "/contacto", icon: "contacto" },
+    { name: "Novedades", href: "/novedades", icon: "novedades" },
+];
+---
+
+<header>
+    <h1>
+        Fisioterapia
+        <img src="/media/logo.png" alt="" />
+        Neros
+    </h1>
+    <nav>
+        {
+            pages.map((page) => {
+                return (
+                    <a
+                        href={page.href}
+                        class={pathname === page.href ? "actual-page" : ""}
+                    >
+                        <img src={"/icons/" + page.icon + ".svg"} alt="" />
+                        {page.name}
+                    </a>
+                );
+            })
+        }
+    </nav>
+    <Hamburger />
+</header>
+
+<style>
+    header {
+        border-bottom: 1px solid;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        height: 100px;
+        margin-bottom: 200px;
+        position: sticky;
+        top: 0;
+    }
+
+    h1 {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        font-weight: unset;
+        gap: 10px;
+        margin-left: 50px;
+    }
+
+    header img {
+        width: 50px;
+    }
+
+    nav {
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(5, 1fr);
+        margin: auto;
+        width: 55%;
+    }
+
+    a {
+        display: flex;
+        text-decoration: none;
+        font-size: 20px;
+        gap: 5px;
+        color: black;
+        position: relative;
+        transition: all 0.7s;
+    }
+
+    a > img {
+        width: 20px;
+    }
+
+    .actual-page,
+    a:hover {
+        font-weight: 500;
+        transform: scale(1.2);
+    }
+
+    /*
+    ----------------------------------------------------------------
+        Underline effect
+    ----------------------------------------------------------------
+    */
+    a::after {
+        background-color: var(--pinkNeros);
+        content: "";
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: width 0.7s;
+        width: 0;
+    }
+
+    a:nth-child(even)::after {
+        background-color: var(--blueNeros);
+    }
+
+    a:hover::after {
+        width: 100%;
+    }
+
+    .actual-page::after {
+        width: 100%;
+    }
+
+    /*
+    ----------------------------------------------------------------
+        Responsive
+    ----------------------------------------------------------------
+    */
+    @media (max-width: 1024px) {
+        header {
+            justify-content: space-between;
+        }
+
+        nav {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+        a {
+            font-size: 15px;
+        }
+    }
+</style>
