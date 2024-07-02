@@ -1,0 +1,52 @@
+---
+import Layout from "@layouts/Layout.astro";
+import { team } from "src/lib/team";
+
+const { id } = Astro.params;
+const member = team.find((member) => member.id === id);
+---
+
+<Layout title=`- ${member?.name}`>
+    <div id="container">
+        <picture>
+            <img
+                src={member?.img}
+                alt=`Fotografía de ${member?.name}`
+                transition:name=`img transition ${member?.id}`
+            />
+        </picture>
+        <div>
+            <h2 transition:name=`title transition ${member?.id}`>
+                {member?.name}
+            </h2>
+            <p>{member?.description}</p>
+        </div>
+    </div>
+</Layout>
+
+<style>
+    #container {
+        display: flex;
+        gap: 25px;
+        width: 650px;
+        margin: auto;
+        padding-bottom: 200px;
+    }
+
+    img {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    #container div {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    p {
+        text-align: justify;
+    }
+</style>

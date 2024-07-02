@@ -1,5 +1,23 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import TeamCard from "@components/TeamCard.astro";
+import Layout from "@layouts/Layout.astro";
+import { team, TeamMember } from "src/lib/team";
 ---
 
-<Layout title=" - Nosotros" />
+<Layout title=" - Nosotros">
+    <div id="container">
+        {
+            team.map((member: TeamMember) => (
+                <TeamCard id={member.id} img={member.img} name={member.name} />
+            ))
+        }
+    </div>
+</Layout>
+
+<style>
+    #container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+</style>
