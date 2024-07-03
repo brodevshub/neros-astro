@@ -1,0 +1,75 @@
+---
+interface Props {
+    href: string;
+    bgColor: string;
+}
+
+const { href, bgColor } = Astro.props;
+---
+
+<a href={href} id="buy" style=`background-color: ${bgColor};`>
+    <span>Leer más</span>
+</a>
+
+<style>
+    #buy {
+        text-decoration: none;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 5px 15px;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+    }
+
+    #buy span {
+        color: white;
+        font-size: 15px;
+    }
+
+    #buy:hover {
+        animation: bn54rotate 0.7s ease-in-out both;
+    }
+
+    #buy:hover span {
+        animation: bn54storm 0.7s ease-in-out both;
+        animation-delay: 0.06s;
+    }
+
+    @keyframes bn54rotate {
+        0% {
+            transform: rotate(0deg) translate3d(0, 0, 0);
+        }
+        25% {
+            transform: rotate(3deg) translate3d(0, 0, 0);
+        }
+        50% {
+            transform: rotate(-3deg) translate3d(0, 0, 0);
+        }
+        75% {
+            transform: rotate(1deg) translate3d(0, 0, 0);
+        }
+        100% {
+            transform: rotate(0deg) translate3d(0, 0, 0);
+        }
+    }
+
+    @keyframes bn54storm {
+        0% {
+            transform: translate3d(0, 0, 0) translateZ(0);
+        }
+        25% {
+            transform: translate3d(4px, 0, 0) translateZ(0);
+        }
+        50% {
+            transform: translate3d(-3px, 0, 0) translateZ(0);
+        }
+        75% {
+            transform: translate3d(2px, 0, 0) translateZ(0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0) translateZ(0);
+        }
+    }
+</style>
