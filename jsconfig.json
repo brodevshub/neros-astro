@@ -8,6 +8,9 @@
       "@layouts/*": [
         "src/layouts/*"
       ],
+      "@icons/*": [
+        "src/icons/*"
+      ],
     }
   }
 }

@@ -1,0 +1,57 @@
+---
+import ContactData from "./ContactData.astro";
+import GoToTopLink from "./GoToTopLink.astro";
+import LegalPages from "./LegalPages.astro";
+---
+
+<footer>
+    <div id="footer_data">
+        <LegalPages />
+        <GoToTopLink />
+        <ContactData />
+    </div>
+
+    <span id="copyright">
+        Casi todos los derechos reservados 2024 © <a href="#">br☯devs</a>
+    </span>
+</footer>
+
+<style>
+    footer {
+        background-color: #121212;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 25px 0;
+    }
+
+    footer #footer_data {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 100%;
+    }
+
+    #copyright { 
+        font-size: 15px;
+        margin-top: 25px;
+    }
+
+    #copyright a {color: white;}
+
+    @media (max-width: 1024px) {
+        #footer_data {
+            flex-direction: column;
+            gap: 50px;
+            margin-top: 25px;
+        }
+
+        #footer_data > div {
+            align-items: center;
+        }
+    }
+</style>

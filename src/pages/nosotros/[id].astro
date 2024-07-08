@@ -1,4 +1,5 @@
 ---
+import Return from "@icons/Return.astro";
 import Layout from "@layouts/Layout.astro";
 import { team } from "src/lib/team";
 
@@ -7,6 +8,9 @@ const member = team.find((member) => member.id === id);
 ---
 
 <Layout title=`- ${member?.name}`>
+    <a href="/nosotros" style=`color: ${member?.bgColor}`
+        ><Return fill={member?.bgColor} />Nosotros</a
+    >
     <div id="container">
         <picture>
             <img
@@ -16,9 +20,12 @@ const member = team.find((member) => member.id === id);
             />
         </picture>
         <div>
-            <h2 transition:name=`title transition ${member?.id}`>
+            <h2 transition:name=`name transition ${member?.id}`>
                 {member?.name}
             </h2>
+            <h3 transition:name=`role transition ${member?.id}`>
+                {member?.role}
+            </h3>
             <p>{member?.description}</p>
         </div>
     </div>
@@ -27,26 +34,49 @@ const member = team.find((member) => member.id === id);
 <style>
     #container {
         display: flex;
-        gap: 25px;
-        width: 650px;
-        margin: auto;
-        padding-bottom: 200px;
+        justify-content: space-evenly;
+        width: 800px;
+        margin: 100px auto;
     }
 
-    img {
-        border-radius: 50%;
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
+    a {
+        display: flex;
+        position: absolute;
+        top: 125px;
+        margin-left: 50px;
+        gap: 5px;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     #container div {
+        width: 50%;
         display: flex;
         flex-direction: column;
-        gap: 50px;
+    }
+
+    picture {
+        width: 50%;
+        margin-right: 25px;
+        height: 500px;
+    }
+
+    img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    h3 {
+        font-size: 15px;
+        color: var(--grayNeros);
     }
 
     p {
+        margin-top: 50px;
         text-align: justify;
     }
 </style>

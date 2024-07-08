@@ -1,0 +1,76 @@
+---
+import Facebook from '@icons/Facebook.astro';
+import Phone from '@icons/Phone.astro';
+import Instagram from '@icons/Instagram.astro';
+import Whatsapp from '@icons/Whatsapp.astro';
+const copyInClipboard = (text: string) => {
+    navigator.clipboard.writeText(text);
+};
+---
+
+<div id="contact_data">
+    <h4>Datos de Contacto</h4>
+    <div>
+        <Facebook />
+        <a href="https://www.facebook.com/fisioterapianeros">Fisioterapia Neros</a>
+    </div>
+
+    <div>
+        <Instagram />
+        <a href="https://www.instagram.com/fisioterapianeros/">@fisioterapianeros</a>
+    </div>
+
+    <div>
+        <Whatsapp />
+        <a href="https://www.linkedin.com/in/eladelreves/">+34 640 064 623</a>
+    </div>
+
+    <div>
+        <Phone />
+        <a href="https://www.linkedin.com/in/eladelreves/">91 603 85 85 90</a>
+    </div>
+</div>
+
+<style>
+    #contact_data {
+        font-size: 16px;
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    h4 {
+        font-size: 20px;
+        text-decoration: underline;
+        text-align: right;
+    }
+    
+    #contact_data > div {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #contact_data > div a {
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    #contact_data > div a:hover {
+        text-decoration: underline;
+    }
+
+    #contact_data > div img {
+        margin-right: 10px;
+        width: 20px;
+    }
+
+    @media (max-width: 1024px) {
+        #contact_data {
+            align-items: center;
+        }
+    }
+</style>

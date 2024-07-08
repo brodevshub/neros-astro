@@ -1,22 +1,27 @@
 ---
 import Hamburger from "@components/Hamburger.astro";
+import Nosotros from "@icons/Nosotros.astro";
+import Home from "@icons/Home.astro";
+import Tecnicas from "@icons/Tecnicas.astro";
+import Contacto from "@icons/Contacto.astro";
+import Novedades from "@icons/Novedades.astro";
 
 const pathname = Astro.url.pathname;
 const pages = [
-    { name: "Home", href: "/", icon: "home" },
-    { name: "Nosotros", href: "/nosotros", icon: "nosotros" },
-    { name: "Técnicas", href: "/tecnicas", icon: "tecnicas" },
-    { name: "Contacto", href: "/contacto", icon: "contacto" },
-    { name: "Novedades", href: "/novedades", icon: "novedades" },
+    { name: "Home", href: "/", icon: Home },
+    { name: "Nosotros", href: "/nosotros", icon: Nosotros },
+    { name: "Técnicas", href: "/tecnicas", icon: Tecnicas },
+    { name: "Contacto", href: "/contacto", icon: Contacto },
+    { name: "Novedades", href: "/novedades", icon: Novedades },
 ];
 ---
 
 <header>
-    <h1>
+    <picture>
         Fisioterapia
         <img src="/media/logo.png" alt="" />
         Neros
-    </h1>
+    </picture>
     <nav>
         {
             pages.map((page) => {
@@ -25,7 +30,7 @@ const pages = [
                         href={page.href}
                         class={pathname === page.href ? "actual-page" : ""}
                     >
-                        <img src={"/icons/" + page.icon + ".svg"} alt="" />
+                        <page.icon />
                         {page.name}
                     </a>
                 );
@@ -41,21 +46,23 @@ const pages = [
         box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
         display: flex;
         align-items: center;
+        justify-content: space-between;
         height: 100px;
         position: sticky;
         top: 0;
-        z-index: 1;
+        z-index: 100;
+        padding: 0 25px;
         background-color: white;
         transition: top 0.3s;
     }
 
-    h1 {
+    picture {
         display: flex;
         align-items: center;
         font-size: 30px;
         font-weight: unset;
         gap: 10px;
-        margin-left: 50px;
+        width: fit-content;
     }
 
     header img {
@@ -66,7 +73,6 @@ const pages = [
         display: grid;
         place-items: center;
         grid-template-columns: repeat(5, 1fr);
-        margin: auto;
         width: 55%;
     }
 
@@ -155,7 +161,5 @@ const pages = [
         });
     }
 
-    document.addEventListener("DOMContentLoaded", (event) => {
-        initHeaderScroll();
-    });
+    initHeaderScroll();
 </script>
