@@ -30,7 +30,6 @@ const { title } = Astro.props;
 			<main>
 				<slot />
 			</main>
-			<Sponsors />
 			<Footer />
 		</div>
 		<style is:global>
@@ -72,5 +71,10 @@ const { title } = Astro.props;
 				background: var(--grayNeros);
 			}
 		</style>
+		<script>
+			import AOS from "aos";
+			import "aos/dist/aos.css";
+			AOS.init();
+		</script>
 	</body>
 </html>

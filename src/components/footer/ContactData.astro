@@ -1,8 +1,8 @@
 ---
-import Facebook from '@icons/Facebook.astro';
-import Phone from '@icons/Phone.astro';
-import Instagram from '@icons/Instagram.astro';
-import Whatsapp from '@icons/Whatsapp.astro';
+import Facebook from "@icons/Facebook.astro";
+import Instagram from "@icons/Instagram.astro";
+import Phone from "@icons/Phone.astro";
+import Whatsapp from "@icons/Whatsapp.astro";
 const copyInClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
 };
@@ -12,12 +12,16 @@ const copyInClipboard = (text: string) => {
     <h4>Datos de Contacto</h4>
     <div>
         <Facebook />
-        <a href="https://www.facebook.com/fisioterapianeros">Fisioterapia Neros</a>
+        <a href="https://www.facebook.com/fisioterapianeros"
+            >Fisioterapia Neros</a
+        >
     </div>
 
     <div>
         <Instagram />
-        <a href="https://www.instagram.com/fisioterapianeros/">@fisioterapianeros</a>
+        <a href="https://www.instagram.com/fisioterapianeros/"
+            >@fisioterapianeros</a
+        >
     </div>
 
     <div>
@@ -42,10 +46,10 @@ const copyInClipboard = (text: string) => {
 
     h4 {
         font-size: 20px;
-        text-decoration: underline;
         text-align: right;
+        text-decoration: underline;
     }
-    
+
     #contact_data > div {
         display: flex;
         justify-content: right;

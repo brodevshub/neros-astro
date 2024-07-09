@@ -1,17 +1,12 @@
 ---
-import Reviews from "@components/Reviews";
 import Sponsors from "@components/Sponsors.astro";
-import Layout from "../layouts/Layout.astro";
+import Techniques from "@components/Techniques.astro";
+import Layout from "@layouts/Layout.astro";
 ---
 
-<script
-    async
-    defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxPpq3PmEmHMzdEnCtWKoyvms8n_0f7gM&libraries=places&callback=initMap"
-></script>
-
-<Layout title=" - Contacto">
-    <h2 data-aos="fade-in" data-aos-duration="800">Contáctanos</h2>
+<Layout title=" - Técnicas">
+    <h2 data-aos="fade-in" data-aos-duration="800">Sabemos lo que buscas</h2>
+    <Techniques />
     <Sponsors />
 </Layout>
 

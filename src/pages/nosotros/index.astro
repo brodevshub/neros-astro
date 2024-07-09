@@ -1,10 +1,12 @@
 ---
+import Sponsors from "@components/Sponsors.astro";
 import TeamCard from "@components/TeamCard.astro";
 import Layout from "@layouts/Layout.astro";
 import { team, TeamMember } from "src/lib/team";
 ---
 
 <Layout title=" - Nosotros">
+    <h2 data-aos="fade-in" data-aos-duration="800">Conoce al equipo</h2>
     <div id="container">
         {
             team.map((member: TeamMember) => (
@@ -18,9 +20,19 @@ import { team, TeamMember } from "src/lib/team";
             ))
         }
     </div>
+    <Sponsors />
 </Layout>
 
 <style>
+    h2 {
+        text-align: center;
+        padding-top: 50px;
+        font-size: 50px;
+        background: linear-gradient(90deg, var(--blueNeros), var(--pinkNeros));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
     #container {
         display: flex;
         align-items: center;

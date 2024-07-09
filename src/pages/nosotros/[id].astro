@@ -1,4 +1,5 @@
 ---
+import Sponsors from "@components/Sponsors.astro";
 import Return from "@icons/Return.astro";
 import Layout from "@layouts/Layout.astro";
 import { team } from "src/lib/team";
@@ -29,6 +30,8 @@ const member = team.find((member) => member.id === id);
             <p>{member?.description}</p>
         </div>
     </div>
+
+    <Sponsors />
 </Layout>
 
 <style>
@@ -57,7 +60,7 @@ const member = team.find((member) => member.id === id);
         display: flex;
         flex-direction: column;
     }
-    
+
     picture {
         width: 50%;
         margin-right: 25px;
