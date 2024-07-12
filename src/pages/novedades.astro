@@ -1,10 +1,13 @@
 ---
+import InstagramFeed from "@components/InstagramFeed";
 import Sponsors from "@components/Sponsors.astro";
-import Layout from "../layouts/Layout.astro";
+import Layout from "@layouts/Layout.astro";
+const token = import.meta.env.INSTAGRAM_ACCESS_TOKEN;
 ---
 
-<Layout title=" - Contacto">
-    <h2 data-aos="fade-in" data-aos-duration="800">Contáctanos</h2>
+<Layout title="- Novedades">
+    <h2 data-aos="fade-in" data-aos-duration="800">Últimas novedades</h2>
+    <InstagramFeed token={token} client:visible />
     <Sponsors />
 </Layout>
 
