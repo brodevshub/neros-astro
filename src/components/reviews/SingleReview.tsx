@@ -15,7 +15,7 @@ export default function SingleReview({ review }) {
         <div className="single_review">
             <img className="single_review_image" src={review.authorAttribution.photoUri} alt={`${review.authorAttribution.displayName}'s avatar`} />
             <span className="single_review_stars">{formatStars(review.rating)}</span>
-            <p className="single_review_content">{review.text.text}</p>
+            <p className="single_review_content">"{review.text.text}</p>
             <a className="single_review_author" href={review.authorAttribution.uri}>{review.authorAttribution.displayName}</a>
             <span className="single_review_date">{formatDate(review.publishTime)}</span>
         </div>
