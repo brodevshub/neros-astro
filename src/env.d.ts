@@ -2,6 +2,7 @@
 
 interface ImportMetaEnv {
     readonly INSTAGRAM_ACCESS_TOKEN: string;
+    readonly GOOGLE_MAPS_API_KEY: string;
 }
 
 interface ImportMeta {

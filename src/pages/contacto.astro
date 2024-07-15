@@ -1,9 +1,14 @@
 ---
+import Reviews from "@components/reviews/Reviews";
 import Sponsors from "@components/Sponsors.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title=" - Contacto">
+    <h2 data-aos="fade-in" data-aos-duration="800">
+        La opinión de nuestros clientes
+    </h2>
+    <Reviews apiKey={import.meta.env.GOOGLE_MAPS_API_KEY} client:visible />
     <h2 data-aos="fade-in" data-aos-duration="800">Contáctanos</h2>
     <Sponsors />
 </Layout>

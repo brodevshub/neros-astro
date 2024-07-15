@@ -1,0 +1,111 @@
+#google_reviews {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #f3f3f3;
+}
+
+#google_reviews > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#rating {
+    font-size: 40px;
+    display: flex;
+    gap: 15px;
+}
+
+#send_review {
+    padding: 15px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--blueNeros), var(--pinkNeros));
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#reviews_container {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    column-gap: 85px;
+    min-height: 50dvh;
+}
+
+.single_review {
+    background-color: #f3f3f3;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.single_review_image{
+    width: 50px;
+}
+
+.single_review_stars {
+    color: gold;
+    font-size: 25px;
+}
+
+.single_review_content {
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    line-height: 1.4;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.single_review_author{
+    text-decoration: none;
+    color: var(--blueNeros);
+}
+
+.single_review_date {
+    color: var(--grayNeros);
+}
+
+/* StarRating.css */
+.stars-container {
+    position: relative;
+    display: inline-block;
+}
+
+.stars {
+    font-size: 40px; /* Ajusta el tamaño según tus necesidades */
+    background: linear-gradient(90deg, gold 0%, gold 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.stars-overlay {
+    font-size: 40px; /* Ajusta el tamaño según tus necesidades */
+    color: lightgray; /* Color para las estrellas no llenas */
+}
