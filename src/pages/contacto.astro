@@ -1,5 +1,7 @@
 ---
+import ContactSection from "@components/ContactSection.astro";
 import Reviews from "@components/reviews/Reviews";
+import SendEmail from "@components/SendEmail";
 import Sponsors from "@components/Sponsors.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -10,6 +12,9 @@ import Layout from "../layouts/Layout.astro";
     </h2>
     <Reviews apiKey={import.meta.env.GOOGLE_MAPS_API_KEY} client:visible />
     <h2 data-aos="fade-in" data-aos-duration="800">Contáctanos</h2>
+
+    <ContactSection />
+    <SendEmail client:visible />
     <Sponsors />
 </Layout>
 
