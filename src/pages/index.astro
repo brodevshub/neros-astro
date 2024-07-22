@@ -1,12 +1,12 @@
 ---
 import Fees from "@components/Fees.astro";
 import MainSection from "@components/MainSection.astro";
-import Slider from "@components/Slider.astro";
+import Slider from "@components/slider/Slider";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="">
-    <Slider />
+    <Slider client:visible />
     <MainSection />
     <Fees />
 </Layout>

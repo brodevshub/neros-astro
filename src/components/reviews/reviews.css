@@ -109,3 +109,42 @@
     font-size: 40px; /* Ajusta el tamaño según tus necesidades */
     color: lightgray; /* Color para las estrellas no llenas */
 }
+
+@media (max-width: 1024px) {
+    #google_reviews {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    #google_reviews > div {
+        gap: 15px;
+    }
+
+    #google_reviews > div img{
+        width: 100%;
+    }
+
+    #rating {
+        justify-content: center;
+        font-size: 30px;
+        gap: 0;
+    }
+
+    .stars {
+        font-size: 30px;
+    }
+
+    .stars-overlay {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    #google_reviews > div{
+        align-items: center;
+        justify-content: center;
+    }
+}

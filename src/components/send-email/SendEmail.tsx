@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Swal from 'sweetalert2';
-import './send-email/send-email.css';
+import './send-email.css';
 
 export default function SendEmail() {
     const [formData, setFormData] = useState({
@@ -88,7 +88,7 @@ export default function SendEmail() {
     };
 
     return (
-        <div id="newsletter">
+        <div id="newsletter" data-aos="fade-in" data-aos-duration="800">
             <div>
                 <h2>Te escuchamos: contacto@fisioterapianeros.com</h2>
                 <form onSubmit={handleSubmit}>
@@ -102,7 +102,7 @@ export default function SendEmail() {
                     <input
                         type="email"
                         name="email"
-                        placeholder="test@test.com"
+                        placeholder="Email"
                         value={formData.email}
                         onChange={handleChange}
                     />

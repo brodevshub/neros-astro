@@ -36,12 +36,14 @@ import LegalPages from "./LegalPages.astro";
         width: 100%;
     }
 
-    #copyright { 
+    #copyright {
         font-size: 15px;
         margin-top: 25px;
     }
 
-    #copyright a {color: white;}
+    #copyright a {
+        color: white;
+    }
 
     @media (max-width: 1024px) {
         #footer_data {
@@ -52,6 +54,13 @@ import LegalPages from "./LegalPages.astro";
 
         #footer_data > div {
             align-items: center;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #copyright {
+            margin-top: 25px;
+            font-size: 12px;
         }
     }
 </style>

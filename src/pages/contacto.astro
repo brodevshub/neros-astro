@@ -1,7 +1,7 @@
 ---
 import ContactSection from "@components/ContactSection.astro";
 import Reviews from "@components/reviews/Reviews";
-import SendEmail from "@components/SendEmail";
+import SendEmail from "@components/send-email/SendEmail";
 import Sponsors from "@components/Sponsors.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -11,8 +11,9 @@ import Layout from "../layouts/Layout.astro";
         La opinión de nuestros clientes
     </h2>
     <Reviews apiKey={import.meta.env.GOOGLE_MAPS_API_KEY} client:visible />
-    <h2 data-aos="fade-in" data-aos-duration="800">Contáctanos</h2>
-
+    <h2 data-aos="fade-in" data-aos-duration="800">
+        Abrimos de Lunes a Viernes <br /> de 9h a 21h
+    </h2>
     <ContactSection />
     <SendEmail client:visible />
     <Sponsors />
@@ -26,5 +27,13 @@ import Layout from "../layouts/Layout.astro";
         background: linear-gradient(90deg, var(--blueNeros), var(--pinkNeros));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+
+    @media (max-width: 767px) {
+        h2 {
+            font-size: 32px;
+            width: 90%;
+            margin: auto;
+        }
     }
 </style>
