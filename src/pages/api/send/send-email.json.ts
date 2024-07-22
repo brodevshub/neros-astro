@@ -7,8 +7,8 @@ export async function POST({ request }) {
         const { name, email, message } = await request.json();
 
         const data = await resend.emails.send({
-            from: "contacto@fisioterapianeros.com",
-            to: ["contacto@fisioterapianeros.com"],
+            from: 'Contacto web <contacto@fisioterapianeros.com>',
+            to: ['contacto@fisioterapianeros.com'],
             subject: `Nuevo mensaje de: ${name}`,
             html: `<div className="bg-slate-500">
                         <h1 className="text-4xl font-bold">${name}</h1>
