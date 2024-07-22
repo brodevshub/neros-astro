@@ -7,11 +7,11 @@ export async function POST({ request }) {
         const { name, email, message } = await request.json();
 
         const data = await resend.emails.send({
-            from: "Acme <onboarding@resend.dev>",
-            to: ["brodevsofficial@gmail.com"],
+            from: "Contacto web <contacto@fisioterapianeros.com>",
+            to: ["contacto@fisioterapianeros.com"],
             subject: `Nuevo mensaje de: ${name}`,
             html: `<div className="bg-slate-500">
-                        <h1 className="text-4xl font-bold">${name}!</h1>
+                        <h1 className="text-4xl font-bold">${name}</h1>
                         <p>${message}</p>
                         <button
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
