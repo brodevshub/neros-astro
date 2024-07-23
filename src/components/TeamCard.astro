@@ -30,7 +30,7 @@ const { id, name, role, img, bgColor } = Astro.props;
 <style>
     div {
         width: 300px;
-        height: 400px;
+        height: 450px;
         overflow: hidden;
         border-radius: 10px;
         display: flex;
@@ -45,10 +45,10 @@ const { id, name, role, img, bgColor } = Astro.props;
 
     img {
         width: 200px;
-        height: 200px;
-        border-radius: 50%;
+        height: 250px;
         object-fit: cover;
         margin: 25px 0;
+        mask-image: linear-gradient(black 80%, transparent);
     }
 
     h2 {
