@@ -14,7 +14,6 @@ export default defineConfig({
     react(),
     sitemap({
       customPages: [
-        'https://www.fisioterapianeros.com/nosotros',
         'https://www.fisioterapianeros.com/nosotros/fernando_sanchez_colmenero',
         'https://www.fisioterapianeros.com/nosotros/belen_colmenero_rubio',
         'https://www.fisioterapianeros.com/nosotros/laura_sanchez_colmenero',
