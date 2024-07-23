@@ -1,0 +1,218 @@
+---
+import Sponsors from "@components/Sponsors.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="- Condiciones de uso" description="Página de condiciones de uso">
+    <div class="row">
+        <div class="col col-xl-10 mx-auto">
+            <div class="paper">
+                <div class="text-center">
+                    <h2 class="m-auto">CONDICIONES DE USO</h2>
+                </div>
+                <div>
+                    <h3>El objeto de las condiciones: El Sitio Web</h3>
+                    <p>
+                        El objeto de las presentes Condiciones Generales de Uso
+                        (en adelante, Condiciones) es regular el acceso y la
+                        utilización del Sitio Web. A los efectos de las
+                        presentes Condiciones se entenderá como Sitio Web: la
+                        apariencia externa de los interfaces de pantalla, tanto
+                        de forma estática como de forma dinámica, es decir, el
+                        árbol de navegación; y todos los elementos integrados
+                        tanto en los interfaces de pantalla como en el árbol de
+                        navegación (en adelante, Contenidos) y todos aquellos
+                        servicios o recursos en línea que en su caso ofrezca a
+                        los Usuarios (en adelante, Servicios).
+                    </p>
+                    <p>
+                        <span class="blanc-space ng-binding"
+                            >Fisioterapia Neros</span
+                        > se reserva la facultad de modificar, en cualquier momento,
+                        y sin aviso previo, la presentación y configuración del Sitio
+                        Web y de los Contenidos y Servicios que en él pudieran estar
+                        incorporados. El Usuario reconoce y acepta que en cualquier
+                        momento
+                        <span class="blanc-space ng-binding"
+                            >Fisioterapia Neros</span
+                        > pueda interrumpir, desactivar y/o cancelar cualquiera de
+                        estos elementos que se integran en el Sitio Web o el acceso
+                        a los mismos.
+                    </p>
+                    <p ng-show="data.accesoLibre == 'Sí'">
+                        El acceso al Sitio Web por el Usuario tiene carácter
+                        libre y, por regla general, es gratuito sin que el
+                        Usuario tenga que proporcionar una contraprestación para
+                        poder disfrutar de ello, salvo en lo relativo al coste
+                        de conexión a través de la red de telecomunicaciones
+                        suministrada por el proveedor de acceso que hubiere
+                        contratado el Usuario.
+                    </p>
+                    <p ng-show="data.accesoLibre == 'No'" class="ng-hide">
+                        Aparte del coste de conexión a través de la red de
+                        telecomunicaciones suministrada por el proveedor de
+                        acceso, y que hubiere contratado el Usuario, algunos de
+                        los Contenidos o Servicios ofrecidos por <span
+                            class="blanc-space ng-binding"
+                            >Fisioterapia Neros</span
+                        > o, en su caso, terceros a través del Sitio Web pueden encontrarse
+                        sujetos a la contratación previa del Contenido o Servicio,
+                        en cuyo caso se especificará de forma clara y/o se pondrá
+                        a disposición del Usuario las correspondientes Condiciones
+                        Generales o Particulares por las que esto se rija.
+                    </p>
+                    <p ng-show="data.registroLibre == 'Sí'" class="ng-hide">
+                        La utilización de alguno de los Contenidos o Servicios
+                        del Sitio Web podrá hacerse mediante la suscripción o
+                        registro previo del Usuario.
+                    </p>
+                    <p ng-show="data.registroLibre == 'No'" class="">
+                        La utilización de los Contenidos no requiere previa
+                        suscripción o registro alguno.
+                    </p>
+                    <h3>El Usuario</h3>
+                    <p>
+                        El acceso, la navegación y uso del Sitio Web, <span
+                            ng-show="data.interaccionLibre == 'Sí'"
+                            >así como por los espacios habilitados para
+                            interactuar entre los Usuarios, y el Usuario y <span
+                                class="blanc-space ng-binding"
+                                >Fisioterapia Neros</span
+                            >, como los comentarios y/o espacios de blogging,</span
+                        > confiere la condición de Usuario, por lo que se aceptan,
+                        desde que se inicia la navegación por el Sitio Web, todas
+                        las Condiciones aquí establecidas, así como sus ulteriores
+                        modificaciones, sin perjuicio de la aplicación de la correspondiente
+                        normativa legal de obligado cumplimiento según el caso. Dada
+                        la relevancia de lo anterior, se recomienda al Usuario leerlas
+                        cada vez que visite el Sitio Web.
+                    </p>
+                    <p>
+                        El Sitio Web de <span class="blanc-space ng-binding"
+                            >Fisioterapia Neros</span
+                        > proporciona gran diversidad de información, servicios y
+                        datos. El Usuario asume su responsabilidad para realizar
+                        un uso correcto del Sitio Web. Esta responsabilidad se extenderá
+                        a:
+                    </p>
+                    <ul>
+                        <li>
+                            Un uso de la información, Contenidos y/o Servicios y
+                            datos ofrecidos por <span
+                                class="blanc-space ng-binding"
+                                >Fisioterapia Neros</span
+                            > sin que sea contrario a lo dispuesto por las presentes
+                            Condiciones, la Ley, la moral o el orden público, o que
+                            de cualquier otro modo puedan suponer lesión de los derechos
+                            de terceros o del mismo funcionamiento del Sitio Web.
+                        </li>
+                        <li>
+                            La veracidad y licitud de las informaciones
+                            aportadas por el Usuario en los formularios
+                            extendidos por <span class="blanc-space ng-binding"
+                                >Fisioterapia Neros</span
+                            > para el acceso a ciertos Contenidos o Servicios ofrecidos
+                            por el Sitio Web. En todo caso, el Usuario notificará
+                            de forma inmediata a <span
+                                class="blanc-space ng-binding"
+                                >Fisioterapia Neros</span
+                            > acerca de cualquier hecho que permita el uso indebido
+                            de la información registrada en dichos formularios, tales
+                            como, pero no solo, el robo, extravío, o el acceso no
+                            autorizado a identificadores y/o contraseñas, con el
+                            fin de proceder a su inmediata cancelación.
+                        </li>
+                    </ul>
+                    <p ng-show="data.interaccionLibre == 'Sí'">
+                        <span class="blanc-space ng-binding"
+                            >Fisioterapia Neros</span
+                        > se reserva el derecho de retirar todos aquellos comentarios
+                        y aportaciones que vulneren la ley, el respeto a la dignidad
+                        de la persona, que sean discriminatorios, xenófobos, racistas,
+                        pornográficos, spamming, que atenten contra la juventud o
+                        la infancia, el orden o la seguridad pública o que, a su
+                        juicio, no resultaran adecuados para su publicación.
+                    </p>
+                    <p ng-show="data.interaccionLibre == 'Sí'">
+                        En cualquier caso, <span class="blanc-space ng-binding"
+                            >Fisioterapia Neros</span
+                        > no será responsable de las opiniones vertidas por los Usuarios
+                        a través de comentarios u otras herramientas de blogging
+                        o de participación que pueda haber.
+                    </p>
+                    <p>
+                        El mero acceso a este Sitio Web no supone entablar
+                        ningún tipo de relación de carácter comercial entre <span
+                            class="blanc-space ng-binding"
+                            >Fisioterapia Neros</span
+                        > y el Usuario.
+                    </p>
+                    <p ng-show="data.mayorEdad == 'Sí'" class="ng-hide">
+                        El Usuario declara ser mayor de edad y disponer de la
+                        capacidad jurídica suficiente para vincularse por las
+                        presentes Condiciones. Por lo tanto, este Sitio Web de <span
+                            class="blanc-space ng-binding"
+                            >Fisioterapia Neros</span
+                        > no se dirige a menores de edad. <span
+                            class="blanc-space ng-binding"
+                            >Fisioterapia Neros</span
+                        > declina cualquier responsabilidad por el incumplimiento
+                        de este requisito.
+                    </p>
+                    <p ng-show="data.mayorEdad == 'No'" class="">
+                        Siempre en el respeto de la legislación vigente, este
+                        Sitio Web de <span class="blanc-space ng-binding"
+                            >Fisioterapia Neros</span
+                        > se dirige a todas las personas, sin importar su edad, que
+                        puedan acceder y/o navegar por las páginas del Sitio Web.
+                    </p>
+                    <p ng-show="data.paisParticular == 'Sí'" class="ng-hide">
+                        El Sitio Web está dirigido principalmente a Usuarios
+                        residentes en <span class="blanc-space ng-binding"
+                        ></span>. <span class="blanc-space ng-binding"
+                            >Fisioterapia Neros</span
+                        > no asegura que el Sitio Web cumpla con legislaciones de
+                        otros países, ya sea total o parcialmente. Si el Usuario
+                        reside o tiene su domiciliado en otro lugar y decide acceder
+                        y/o navegar en el Sitio Web lo hará bajo su propia responsabilidad,
+                        deberá asegurarse de que tal acceso y navegación cumple con
+                        la legislación local que le es aplicable, no asumiendo <span
+                            class="blanc-space ng-binding"
+                            >Fisioterapia Neros</span
+                        > responsabilidad alguna que se pueda derivar de dicho acceso.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <Sponsors />
+</Layout>
+
+<style>
+    h2 {
+        text-align: center;
+        padding-top: 50px;
+        font-size: 50px;
+        background: linear-gradient(90deg, var(--blueNeros), var(--pinkNeros));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @media (max-width: 767px) {
+        h2 {
+            font-size: 32px;
+            width: 90%;
+            margin: auto;
+        }
+    }
+
+    .row {
+        width: 90%;
+        margin: auto;
+        text-align: justify;
+    }
+
+    h3 {
+        margin-top: 50px;
+    }
+</style>

@@ -36,14 +36,28 @@ export default function SendEmail() {
         }
 
         if (valid) {
-            sendEmail();
+            Swal.fire({
+                title: '¿Estás seguro?',
+                html: 'Al enviar su mensaje acepta nuestras '
+                    + '<a target="_blank" href="/informacion/condiciones-de-uso">Condiciones de uso</a>'
+                    + ' y '
+                    + '<a target="_blank" href = "/informacion/politica-de-privacidad">Política de privacidad</a>',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Sí, enviar',
+                cancelButtonText: 'No, cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    sendEmail();
+                }
+            });
         } else {
             Swal.fire({
                 title: 'Error',
                 text: error,
                 icon: 'error',
                 confirmButtonText: 'Ok'
-            })
+            });
         }
     };
 
@@ -67,7 +81,9 @@ export default function SendEmail() {
                 text: 'Pronto recibirá una respuesta, gracias',
                 icon: 'success',
                 confirmButtonText: 'Ok'
-            })
+            }).then(() => {
+                location.reload();
+            });
 
         } catch (error) {
             Swal.fire({

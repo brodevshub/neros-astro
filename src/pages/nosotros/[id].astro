@@ -8,7 +8,7 @@ const { id } = Astro.params;
 const member = team.find((member) => member.id === id);
 ---
 
-<Layout title=`- ${member?.name}`>
+<Layout title=`- ${member?.name}` description="Página de ${member?.name}">
     <a href="/nosotros" style=`color: ${member?.bgColor}`
         ><Return fill={member?.bgColor} />Nosotros</a
     >

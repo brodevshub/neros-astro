@@ -5,7 +5,7 @@ import Layout from "@layouts/Layout.astro";
 const token = import.meta.env.INSTAGRAM_ACCESS_TOKEN;
 ---
 
-<Layout title="- Novedades">
+<Layout title="- Novedades" description="Página de las últimas novedades">
     <h2 data-aos="fade-in" data-aos-duration="800">Últimas novedades</h2>
     <InstagramFeed token={token} client:visible />
     <Sponsors />
