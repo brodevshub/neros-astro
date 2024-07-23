@@ -10,6 +10,26 @@ dotenv.config();
 export default defineConfig({
   output: 'server',
   site: 'https://fisioterapianeros.com',
-  integrations: [react(), sitemap()],
+  integrations: [
+    react(),
+    sitemap({
+      customPages: [
+        'https://www.fisioterapianeros.com',
+        'https://www.fisioterapianeros.com/nosotros',
+        'https://www.fisioterapianeros.com/nosotros/fernando_sanchez_colmenero',
+        'https://www.fisioterapianeros.com/nosotros/belen_colmenero_rubio',
+        'https://www.fisioterapianeros.com/nosotros/laura_sanchez_colmenero',
+        'https://www.fisioterapianeros.com/tecnicas',
+        'https://www.fisioterapianeros.com/contacto',
+        'https://www.fisioterapianeros.com/novedades',
+        'https://www.fisioterapianeros.com/informacion/aviso-legal',
+        'https://www.fisioterapianeros.com/informacion/condiciones-de-uso',
+        'https://www.fisioterapianeros.com/informacion/politica-de-privacidad',
+        'https://www.fisioterapianeros.com/informacion/cookies',
+        'https://www.fisioterapianeros.com/media/logo.png',
+        'https://stargazers.club/external-page2'
+      ]
+    })
+  ],
   adapter: vercel()
 });
