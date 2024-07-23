@@ -12,8 +12,11 @@ const { title, description } = Astro.props;
 <meta property="og:description" content={description} />
 <meta
     property="og:image"
-    content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-O-1jL8VaHQ81qMMdWfZ0HQJspFdQlbC3A&s"
+    content="https://www.fisioterapianeros.com/media/logo.png"
 />
+<meta property="og:image:alt" content="Fisioterapia Neros logo" />
+<meta property="og:site_name" content="Fisioterapia Neros" />
+<meta property="og:locale" content="es_ESP" />
 <meta property="og:url" content="https://fisioterapianeros.com" />
 <meta property="og:type" content="website" />
 
@@ -26,9 +29,7 @@ const { title, description } = Astro.props;
         "@context": "https://schema.org",
         "@type": "Website",
         "headline": "Fisioterapia Neros",
-        "image": [
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-O-1jL8VaHQ81qMMdWfZ0HQJspFdQlbC3A&s"
-        ],
+        "image": ["https://www.fisioterapianeros.com/media/logo.png"],
         "author": {
             "@type": "Organization",
             "name": "Brodevs"
