@@ -9,7 +9,7 @@ dotenv.config();
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
-  site: 'https://fisioterapianeros.com',
+  site: 'https://www.fisioterapianeros.com',
   integrations: [
     react(),
     sitemap({
@@ -26,8 +26,7 @@ export default defineConfig({
         'https://www.fisioterapianeros.com/informacion/condiciones-de-uso',
         'https://www.fisioterapianeros.com/informacion/politica-de-privacidad',
         'https://www.fisioterapianeros.com/informacion/cookies',
-        'https://www.fisioterapianeros.com/media/logo.png',
-        'https://stargazers.club/external-page2'
+        'https://www.fisioterapianeros.com/media/logo.png'
       ]
     })
   ],
