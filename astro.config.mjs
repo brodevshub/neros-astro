@@ -19,6 +19,11 @@ export default defineConfig({
         'https://www.fisioterapianeros.com/nosotros/laura_sanchez_colmenero',
         'https://www.fisioterapianeros.com/media/logo.png'
       ]
+    }),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
     })
   ],
   adapter: vercel()
